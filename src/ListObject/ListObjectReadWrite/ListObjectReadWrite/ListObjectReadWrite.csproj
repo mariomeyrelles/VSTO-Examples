@@ -16,6 +16,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
     <ProjectGuid>{D5A1C2DA-B7A3-4680-A873-CF66F5DF46CB}</ProjectGuid>
+    <SolutionID>86c02b99-6d84-482c-b718-abd67b66c94f</SolutionID>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -53,6 +54,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ListObjectReadWrite_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6F3D7E2D3C6051B2904D09C427A914CA7F0A92F8</ManifestCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -99,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ribbon1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon1.Designer.cs">
+      <DependentUpon>Ribbon1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sheet1.cs">
       <DependentUpon>Book1.xlsx</DependentUpon>
     </Compile>
@@ -132,10 +148,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ribbon1.resx">
+      <DependentUpon>Ribbon1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sheet1.resx">
       <DependentUpon>Sheet1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Book1.xlsx" />
+    <None Include="ListObjectReadWrite_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

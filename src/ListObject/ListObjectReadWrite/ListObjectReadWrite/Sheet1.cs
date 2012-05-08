@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Tools.Excel;
 using Microsoft.VisualStudio.Tools.Applications.Runtime;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -16,7 +17,15 @@ namespace ListObjectReadWrite
     {
         private void Sheet1_Startup(object sender, System.EventArgs e)
         {
+            this.tblSalesOrderDetails.SelectionChange += new DocEvents_SelectionChangeEventHandler(tblSalesOrderDetails_SelectionChange);
         }
+
+        void tblSalesOrderDetails_SelectionChange(Range Target)
+        {
+            //select the ribbon with the test buttons
+            Globals.Ribbons.Ribbon1.RibbonUI.ActivateTabMso("TabAddIns");
+        }
+
 
         private void Sheet1_Shutdown(object sender, System.EventArgs e)
         {
