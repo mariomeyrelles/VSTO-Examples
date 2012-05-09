@@ -109,12 +109,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadWriteTests.cs" />
     <Compile Include="Ribbon1.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Ribbon1.Designer.cs">
       <DependentUpon>Ribbon1.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalesOrderDetail.cs" />
     <Compile Include="Sheet1.cs">
       <DependentUpon>Book1.xlsx</DependentUpon>
     </Compile>

@@ -59,11 +59,13 @@
             // 
             this.button1.Label = "Read: Bad Performance";
             this.button1.Name = "button1";
+            this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Label = "Read: Good Performance";
             this.button2.Name = "button2";
+            this.button2.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button2_Click);
             // 
             // Ribbon1
             // 

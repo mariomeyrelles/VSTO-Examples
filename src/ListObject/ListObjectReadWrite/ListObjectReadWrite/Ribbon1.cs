@@ -12,5 +12,17 @@ namespace ListObjectReadWrite
         {
 
         }
+
+        private void button1_Click(object sender, RibbonControlEventArgs e)
+        {
+            var tests = new ReadWriteTests();
+            tests.Read();
+        }
+
+        private void button2_Click(object sender, RibbonControlEventArgs e)
+        {
+            var tests = new ReadWriteTests();
+            tests.ReadFaster();
+        }
     }
 }
