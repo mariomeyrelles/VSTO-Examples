@@ -15,12 +15,12 @@ namespace ListObjectReadWrite
     {
         private List<SalesOrderDetail> _salesDetails = new List<SalesOrderDetail>(122000);
 
-        public void ReadSlower()
+        public void Read()
         {
             _salesDetails.Clear();
             _salesDetails = new List<SalesOrderDetail>(122000);
-
-            Stopwatch watch = new Stopwatch();
+            
+            var watch = new Stopwatch();
             watch.Start();
 
             for (var i = 1; i <= Globals.Sheet1.tblSalesOrderDetails.ListRows.Count; i++)
@@ -42,7 +42,7 @@ namespace ListObjectReadWrite
             }
 
             watch.Stop();
-            //about 300 secs
+            //about 220 secs
             MessageBox.Show("Elapsed time in sec: " + watch.Elapsed.TotalSeconds);
 
         }
@@ -52,12 +52,23 @@ namespace ListObjectReadWrite
             _salesDetails.Clear();
             _salesDetails = new List<SalesOrderDetail>(122000);
 
+            var sb = new StringBuilder();
+
             var watch = new Stopwatch();
             watch.Start();
 
+            
             Globals.ThisWorkbook.ThisApplication.EnableEvents = false;
 
             object[,] rawData = Globals.Sheet1.tblSalesOrderDetails.Range.Value2;
+
+            watch.Stop();
+
+            //about 13 secs
+            sb.AppendLine("Elapsed Time (getting data from Excel) in sec: " + watch.Elapsed.TotalSeconds);
+
+            watch.Restart();
+            
             for (var row = 2; row <= rawData.GetLength(0); row++)
             {
                 var salesDetail = new SalesOrderDetail();
@@ -76,12 +87,15 @@ namespace ListObjectReadWrite
                 _salesDetails.Add(salesDetail);
             }
 
+
             watch.Stop();
 
+            //milliseconds only.
+            sb.AppendLine("Elapsed Time (processing data inside .NET) in sec: " + watch.Elapsed.TotalSeconds);
 
             Globals.ThisWorkbook.ThisApplication.EnableEvents = true;
-            //about 16 secs
-            MessageBox.Show("Elapsed time in sec: " + watch.Elapsed.TotalSeconds);
+            
+            MessageBox.Show(sb.ToString());
 
         }
 
@@ -149,7 +163,7 @@ namespace ListObjectReadWrite
 
             watch.Stop();
 
-            //about 100 secs
+            //about 16 secs
             MessageBox.Show("Elapsed time in sec: " + watch.Elapsed.TotalSeconds);
         }
 

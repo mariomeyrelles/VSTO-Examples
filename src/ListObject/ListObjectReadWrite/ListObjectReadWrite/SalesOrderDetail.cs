@@ -14,6 +14,5 @@ namespace ListObjectReadWrite
         public double UnitPriceDiscount { get; set; }
         public double LineTotal { get; set; }
         public DateTime ModifiedDate { get; set; }
-
     }
 }
