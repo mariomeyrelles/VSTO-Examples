@@ -8,21 +8,26 @@ namespace ListObjectReadWrite
 {
     public partial class Ribbon1
     {
+        private ReadWriteTests _tests;
+
         private void Ribbon1_Load(object sender, RibbonUIEventArgs e)
         {
-
+            _tests = new ReadWriteTests();
         }
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
-            var tests = new ReadWriteTests();
-            tests.Read();
+            _tests.ReadSlower();
         }
 
         private void button2_Click(object sender, RibbonControlEventArgs e)
         {
-            var tests = new ReadWriteTests();
-            tests.ReadFaster();
+            _tests.ReadFaster();
+        }
+
+        private void button3_Click(object sender, RibbonControlEventArgs e)
+        {
+            _tests.Write();
         }
     }
 }

@@ -13,54 +13,98 @@ namespace ListObjectReadWrite
 {
     public class ReadWriteTests
     {
-        public List<SalesOrderDetail> Read()
-        {
+        private List<SalesOrderDetail> _salesDetails = new List<SalesOrderDetail>(122000);
 
-            var salesDetails = new List<SalesOrderDetail>();
+        public void ReadSlower()
+        {
+            _salesDetails.Clear();
+            _salesDetails = new List<SalesOrderDetail>(122000);
 
             Stopwatch watch = new Stopwatch();
             watch.Start();
 
-            for (int i = 1; i <= Globals.Sheet1.tblSalesOrderDetails.ListRows.Count; i++)
+            for (var i = 1; i <= Globals.Sheet1.tblSalesOrderDetails.ListRows.Count; i++)
             {
                 var salesDetail = new SalesOrderDetail();
 
-                salesDetail.SalesOrderDetailID = (int) Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 1].Value2;
+                salesDetail.SalesOrderID = (int)Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 1].Value2;
+                salesDetail.SalesOrderDetailID = (int)Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 2].Value2;
+                salesDetail.CarrierTrackingNumber = Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 3].Value2;
+                salesDetail.OrderQty = (int)Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 4].Value2;
+                salesDetail.ProductID = (int)Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 5].Value2;
+                salesDetail.SpecialOfferID = (int)Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 6].Value2;
+                salesDetail.UnitPrice = (double)Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 7].Value2;
+                salesDetail.UnitPriceDiscount = (double)Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 8].Value2;
+                salesDetail.LineTotal = (double)Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 9].Value2;
+                salesDetail.ModifiedDate = DateTime.FromOADate(Globals.Sheet1.tblSalesOrderDetails.ListRows[i].Range[1, 10].Value2);
 
-                salesDetails.Add(salesDetail);
+                _salesDetails.Add(salesDetail);
             }
 
             watch.Stop();
+            //about 300 secs
+            MessageBox.Show("Elapsed time in sec: " + watch.Elapsed.TotalSeconds);
 
-            MessageBox.Show("Elapsed time: " + watch.Elapsed.TotalSeconds);
-
-            return salesDetails;
         }
 
-        public List<SalesOrderDetail> ReadFaster()
+        public void ReadFaster()
         {
-            Stopwatch watch = new Stopwatch();
+            _salesDetails.Clear();
+            _salesDetails = new List<SalesOrderDetail>(122000);
+
+            var watch = new Stopwatch();
             watch.Start();
 
-            var salesDetails = new List<SalesOrderDetail>();
             object[,] rawData = Globals.Sheet1.tblSalesOrderDetails.Range.Value2;
-
             for (var row = 2; row <= rawData.GetLength(0); row++)
             {
                 var salesDetail = new SalesOrderDetail();
 
-                salesDetail.SalesOrderDetailID = Convert.ToInt32(rawData[row, 1]);
+                salesDetail.SalesOrderID = Convert.ToInt32(rawData[row, 1]);
+                salesDetail.SalesOrderDetailID =  Convert.ToInt32(rawData[row, 2]);
+                salesDetail.CarrierTrackingNumber =  Convert.ToString(rawData[row, 3]);
+                salesDetail.OrderQty = Convert.ToInt32(rawData[row, 4]);
+                salesDetail.ProductID = Convert.ToInt32(rawData[row, 5]);
+                salesDetail.SpecialOfferID = Convert.ToInt32(rawData[row, 6]);
+                salesDetail.UnitPrice = Convert.ToDouble(rawData[row, 7]);
+                salesDetail.UnitPriceDiscount = Convert.ToDouble(rawData[row, 8]);
+                salesDetail.LineTotal = Convert.ToDouble(rawData[row, 9]);
+                salesDetail.ModifiedDate = DateTime.FromOADate((double)rawData[row, 10]);
 
-                salesDetails.Add(salesDetail);
+                _salesDetails.Add(salesDetail);
             }
 
             watch.Stop();
 
-            MessageBox.Show("Elapsed time: " + watch.Elapsed.TotalSeconds);
+            //about 16 secs
+            MessageBox.Show("Elapsed time in sec: " + watch.Elapsed.TotalSeconds);
 
-            return salesDetails;
         }
 
+        public void Write()
+        {
+            if (_salesDetails == null || _salesDetails.Count == 0)
+            {
+                MessageBox.Show("Please load data first");
+                return;
+            }
+
+            var watch = new Stopwatch();
+            watch.Start();
+
+
+            Globals.Sheet1.tblSalesOrderDetails.SetDataBinding(_salesDetails, "", "SalesOrderID", "SalesOrderDetailID",
+                                                               "CarrierTrackingNumber", "OrderQty", "ProductID",
+                                                               "SpecialOfferID", "UnitPrice", "UnitPriceDiscount",
+                                                               "LineTotal", "ModifiedDate");
+
+            Globals.Sheet1.tblSalesOrderDetails.Disconnect();
+
+            watch.Stop();
+
+            //about 100 secs
+            MessageBox.Show("Elapsed time in sec: " + watch.Elapsed.TotalSeconds);
+        }
 
 
     }

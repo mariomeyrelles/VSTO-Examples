@@ -4,7 +4,7 @@ namespace ListObjectReadWrite
 {
     public class SalesOrderDetail
     {
-        public int SalesOrderId { get; set; }
+        public int SalesOrderID { get; set; }
         public int SalesOrderDetailID { get; set; }
         public string CarrierTrackingNumber { get; set; }
         public int OrderQty { get; set; }
