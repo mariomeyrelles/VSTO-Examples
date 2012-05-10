@@ -29,5 +29,10 @@ namespace ListObjectReadWrite
         {
             _tests.Write();
         }
+
+        private void button4_Click(object sender, RibbonControlEventArgs e)
+        {
+            _tests.WriteFaster();
+        }
     }
 }
