@@ -17,7 +17,7 @@ namespace ListObjectReadWrite
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
-            _tests.ReadSlower();
+            _tests.FailedReadMethod();
         }
 
         private void button2_Click(object sender, RibbonControlEventArgs e)

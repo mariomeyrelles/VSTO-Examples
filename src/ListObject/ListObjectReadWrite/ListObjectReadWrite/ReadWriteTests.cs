@@ -15,6 +15,30 @@ namespace ListObjectReadWrite
     {
         private List<SalesOrderDetail> _salesDetails = new List<SalesOrderDetail>(122000);
 
+
+        public void FailedReadMethod()
+        {
+            _salesDetails.Clear();
+            _salesDetails = new List<SalesOrderDetail>(122000);
+
+            var watch = new Stopwatch();
+            watch.Start();
+
+            foreach (ListRow listRow in Globals.Sheet1.tblSalesOrderDetails.ListRows)
+            {
+                var salesDetail = new SalesOrderDetail();
+
+                salesDetail.SalesOrderID = (int)listRow.Range[1, 1].Value2;
+                //read other properties...
+            }
+
+            watch.Stop();
+            //about 220 secs
+            MessageBox.Show("Elapsed time in sec: " + watch.Elapsed.TotalSeconds);
+
+        }
+
+
         public void Read()
         {
             _salesDetails.Clear();
@@ -56,7 +80,6 @@ namespace ListObjectReadWrite
 
             var watch = new Stopwatch();
             watch.Start();
-
             
             Globals.ThisWorkbook.ThisApplication.EnableEvents = false;
 
@@ -87,7 +110,6 @@ namespace ListObjectReadWrite
                 _salesDetails.Add(salesDetail);
             }
 
-
             watch.Stop();
 
             //milliseconds only.
@@ -96,7 +118,6 @@ namespace ListObjectReadWrite
             Globals.ThisWorkbook.ThisApplication.EnableEvents = true;
             
             MessageBox.Show(sb.ToString());
-
         }
 
         public void Write()
@@ -117,10 +138,9 @@ namespace ListObjectReadWrite
                                                                "LineTotal", "ModifiedDate");
 
             Globals.Sheet1.tblSalesOrderDetails.Disconnect();
-
-            watch.Stop();
             Globals.ThisWorkbook.ThisApplication.EnableEvents = true;
-
+            
+            watch.Stop();
             //about 100 secs
             MessageBox.Show("Elapsed time in sec: " + watch.Elapsed.TotalSeconds);
         }
@@ -136,10 +156,13 @@ namespace ListObjectReadWrite
             var watch = new Stopwatch();
             watch.Start();
 
+            var table = Globals.Sheet1.tblSalesOrderDetails;
+            
+            Globals.ThisWorkbook.ThisApplication.ScreenUpdating = false;
             Globals.ThisWorkbook.ThisApplication.EnableEvents = false;
 
-
-            object[,] arrayOfSales = new object[_salesDetails.Count,10];
+            //two-dimensional array to be bound to a listobject range.
+            var arrayOfSales = new object[_salesDetails.Count, 10];
 
             for (int i = 0; i < _salesDetails.Count; i++)
             {
@@ -152,18 +175,18 @@ namespace ListObjectReadWrite
                 arrayOfSales[i, 6] = _salesDetails[i].UnitPrice;
                 arrayOfSales[i, 7] = _salesDetails[i].UnitPriceDiscount;
                 arrayOfSales[i, 8] = _salesDetails[i].LineTotal;
-                arrayOfSales[i, 9] = _salesDetails[i].ModifiedDate;
+                arrayOfSales[i, 9] = _salesDetails[i].ModifiedDate; //no need to worry about OADate!
             }
 
-            Globals.Sheet1.tblSalesOrderDetails.DataBodyRange.Value2 = arrayOfSales;
-
-
+            //adjust the range of listobject to accomodate the new rows - remember that range arrays are not zero-based.
+            table.Resize(table.Range.Resize[_salesDetails.Count + 1]);
+            table.DataBodyRange.Value2 = arrayOfSales;
 
             Globals.ThisWorkbook.ThisApplication.EnableEvents = true;
-
+            Globals.ThisWorkbook.ThisApplication.ScreenUpdating = true;
             watch.Stop();
 
-            //about 16 secs
+            //about 15 secs
             MessageBox.Show("Elapsed time in sec: " + watch.Elapsed.TotalSeconds);
         }
 
