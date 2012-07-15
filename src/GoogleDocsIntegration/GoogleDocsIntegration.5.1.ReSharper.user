@@ -1,0 +1,266 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/f:Ribbon1.cs" caret="338" fromTop="14" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.Designer.cs" caret="66" fromTop="1" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/f:App.cs" caret="575" fromTop="18" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.cs" caret="3022" fromTop="32" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:LoginForm.Designer.cs" caret="0" fromTop="0" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:LoginForm.cs" caret="1443" fromTop="36" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="2121" fromTop="38" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/f:Ribbon1.cs" caret="539" fromTop="14" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="2230" fromTop="19" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.cs" caret="459" fromTop="0" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.Designer.cs" caret="7885" fromTop="29" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.cs" caret="1965" fromTop="13" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.cs" caret="2087" fromTop="18" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.cs" caret="3253" fromTop="43" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.cs" caret="3241" fromTop="45" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.cs" caret="2942" fromTop="32" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.cs" caret="3253" fromTop="40" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="2230" fromTop="2" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="709" fromTop="25" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="504" fromTop="17" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/f:App.cs" caret="575" fromTop="18" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.cs" caret="3165" fromTop="36" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:WorksheetListForm.cs" caret="2760" fromTop="22" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="868" fromTop="29" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="945" fromTop="18" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="1884" fromTop="32" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="1921" fromTop="33" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="1403" fromTop="27" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="1455" fromTop="22" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="1674" fromTop="19" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:LoginForm.cs" caret="1666" fromTop="4" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:LoginForm.cs" caret="1643" fromTop="25" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="1265" fromTop="19" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="2230" fromTop="45" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="2105" fromTop="40" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="2121" fromTop="38" />
+      <File id="D0E4B72D-A63A-4E9D-B3D0-B13B8B46256A/d:Forms/f:GoogleDocsHelperControl.cs" caret="2121" fromTop="38" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="static" priority="2" />
+      <Item value="private" priority="0" />
+      <Item value="SpreadsheetsService`0" priority="0" />
+      <Item value="_service" priority="2" />
+      <Item value="null" priority="0" />
+      <Item value="new" priority="11" />
+      <Item value="SpreadsheetsService" priority="0" />
+      <Item value="return" priority="3" />
+      <Item value="ApplicationLogic`0" priority="2" />
+      <Item value="this" priority="13" />
+      <Item value="MessageBox`0" priority="0" />
+      <Item value="OK" priority="0" />
+      <Item value="Error" priority="0" />
+      <Item value="var" priority="20" />
+      <Item value="loginForm" priority="1" />
+      <Item value="WorksheetList`0" priority="0" />
+      <Item value="wksListForm" priority="0" />
+      <Item value="foreach" priority="3" />
+      <Item value="DataGridViewAutoSizeRowMode`0" priority="1" />
+      <Item value="ListViewItem`0" priority="0" />
+      <Item value="ListViewItem" priority="0" />
+      <Item value="ListViewGroup" priority="0" />
+      <Item value="entry" priority="3" />
+      <Item value="if" priority="2" />
+      <Item value="LoginForm`0" priority="1" />
+      <Item value="WorksheetListForm`0" priority="0" />
+      <Item value="from" priority="0" />
+      <Item value="SpreadsheetQuery`0" priority="0" />
+      <Item value="query" priority="1" />
+      <Item value="documentTitle" priority="0" />
+      <Item value="App`0" priority="6" />
+      <Item value="selectedSpreadsheet" priority="0" />
+      <Item value="SpreadsheetEntry`0" priority="0" />
+      <Item value="worksheet" priority="2" />
+      <Item value="listItem" priority="0" />
+      <Item value="listView2" priority="0" />
+      <Item value="string" priority="2" />
+      <Item value="Tag" priority="0" />
+      <Item value="currentWks" priority="1" />
+      <Item value="as" priority="0" />
+      <Item value="public" priority="0" />
+      <Item value="Globals`0" priority="1" />
+      <Item value="GoogleDocsIntegration" priority="0" />
+      <Item value="WorksheetEntry`0" priority="0" />
+      <Item value="wks" priority="0" />
+      <Item value="Debug`0" priority="0" />
+      <Item value="AssemblyLoadEventArgs`0" priority="0" />
+      <Item value="listFeed" priority="2" />
+      <Item value="DataTable`0" priority="0" />
+      <Item value="dataTable" priority="7" />
+      <Item value="columnName" priority="0" />
+      <Item value="dataRow" priority="1" />
+      <Item value="element" priority="1" />
+      <Item value="List" priority="0" />
+      <Item value="List&lt;string&gt;" priority="0" />
+      <Item value="columnNames" priority="2" />
+      <Item value="col" priority="0" />
+      <Item value="DataColumn`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@GoogleDocsIntegration.ApplicationLogic">
+      <Item value="Service" priority="0" />
+      <Item value="CurrentPassword" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Spreadsheets.SpreadsheetsService">
+      <Item value="setUserCredentials`0" priority="0" />
+      <Item value="Query`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GoogleDocsIntegration.Forms.LoginForm">
+      <Item value="textBox1" priority="0" />
+      <Item value="maskedTextBox1" priority="0" />
+      <Item value="Show`0" priority="1" />
+      <Item value="txtUser" priority="3" />
+      <Item value="Close`0" priority="0" />
+      <Item value="txtPass" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MaskedTextBox">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GoogleDocsIntegration.Forms.WorksheetListForm">
+      <Item value="Show`0" priority="0" />
+      <Item value="Close`0" priority="2" />
+      <Item value="Icon" priority="0" />
+      <Item value="listView1" priority="1" />
+      <Item value="listView2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Client.AtomEntry">
+      <Item value="Authors" priority="0" />
+      <Item value="Title" priority="1" />
+      <Item value="EditUri" priority="0" />
+      <Item value="AlternateUri" priority="0" />
+      <Item value="ExtensionElements" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Client.AtomTextConstruct">
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Client.AtomUri">
+      <Item value="Content" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView">
+      <Item value="ControlAdded" priority="1" />
+      <Item value="Items" priority="0" />
+      <Item value="SelectedItems" priority="0" />
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView+ListViewItemCollection">
+      <Item value="Indexer" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="0" />
+      <Item value="Join`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem">
+      <Item value="SubItems" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem+ListViewSubItem">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Spreadsheets.SpreadsheetQuery">
+      <Item value="Title" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@GoogleDocsIntegration.App">
+      <Item value="Service" priority="1" />
+      <Item value="SetSidePanel`0" priority="0" />
+      <Item value="CurrentWorksheet" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Spreadsheets.SpreadsheetFeed">
+      <Item value="Entries" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Spreadsheets.WorksheetFeed">
+      <Item value="Entries" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@GoogleDocsIntegration.Globals">
+      <Item value="ThisWorkbook" priority="0" />
+      <Item value="Sheet1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GoogleDocsIntegration.ThisWorkbook">
+      <Item value="ActionsPane" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Office.Tools.ActionsPane">
+      <Item value="Controls" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control+ControlCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GoogleDocsIntegration.Forms.GoogleDocsHelperControl">
+      <Item value="lblActiveWks" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Spreadsheets.ListEntry+Custom">
+      <Item value="LocalName" priority="1" />
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Spreadsheets.ListFeed">
+      <Item value="Entries" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Client.IExtensionElementFactory">
+      <Item value="XmlName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataTable">
+      <Item value="Columns" priority="4" />
+      <Item value="Rows" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataColumnCollection">
+      <Item value="Add`0" priority="0" />
+      <Item value="GetEnumerator`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRowCollection">
+      <Item value="Indexer" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GoogleDocsIntegration.Sheet1">
+      <Item value="tblSalesOrderDetails" priority="0" />
+      <Item value="tblGoogleData" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Office.Tools.Excel.ListObject">
+      <Item value="SetDataBinding`0" priority="0" />
+      <Item value="ListColumns" priority="0" />
+      <Item value="HeaderRowRange" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="0" />
+      <Item value="Concat`1" priority="0" />
+      <Item value="Join`4" priority="0" />
+      <Item value="ToArray`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataColumn">
+      <Item value="ColumnName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Office.Interop.Excel.Range">
+      <Item value="Columns" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
